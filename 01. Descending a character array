@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 /*
-*프로그래머스
-*문자열 내림차순으로 배치하기
+* 프로그래머스
+* 1.문자열 내림차순으로 배치하기
 */
 public class ReverseStr {
    
