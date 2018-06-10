@@ -1,0 +1,26 @@
+/* 
+* 프로그래머스 
+* 2.김서방 찾기 (Finding Kim)
+*/
+public class Solution {
+	public String solution(String[] seoul) {
+		int x = 0;
+		for (int i = 0; i < seoul.length; i++) {
+			if (seoul[i].equals("Kim")) {
+				x = i;
+				break;
+			}
+		}
+		System.out.println("x:" + x);
+
+		String answer = "김서방은 " + x + "에 있다";
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		Solution kim = new Solution();
+		String[] names = { "Queen", "Tod", "Kim" };
+		System.out.println(kim.solution(names));
+	}
+
+}
