@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+/*
+*프로그래머스
+*문자열 내림차순으로 배치하기
+*/
+public class ReverseStr {
+   
+        public String reverseStr(String str){
+        String result = "";
+
+        char[] strArr = str.toCharArray();
+        Arrays.sort(strArr);
+        
+        for(int i=strArr.length-1; i>=0; i--){
+            result += strArr[i];
+        }
+
+        return result;
+    }
+
+    // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    public static void main(String[] args) {
+        ReverseStr rs = new ReverseStr();
+        System.out.println( rs.reverseStr("Zbcdefg") );
+    }
+}
