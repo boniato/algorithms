@@ -29,6 +29,7 @@ def solution(arr):
 
     # Below is a test to see code.
     arr = [4,3,2,1]
+    solution(arr)
 
 
 
