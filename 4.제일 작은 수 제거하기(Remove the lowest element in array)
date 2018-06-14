@@ -17,9 +17,7 @@ arr	return
 
 
 def solution(arr):
-    res = []
-
-    #
+    
     if len(arr) <= 1:
         arr[0] = -1   
     else:
@@ -29,9 +27,8 @@ def solution(arr):
 
     return arr
 
-# Below is a test to see code.
+    # Below is a test to see code.
     arr = [4,3,2,1]
-    #print( "result:".format(solution(arr)) )
 
 
 
