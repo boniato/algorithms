@@ -1,0 +1,39 @@
+# 문제)
+# 자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.
+# 예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+
+# 제한사항)
+# N의 범위 : 100,000,000 이하의 자연수
+
+# 입출력 예 #2
+# 9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
+
+
+
+# solution1 (for문)
+
+def solution(n):
+    answer = 0
+    numList = list(map(int, str(n))) # str to int
+    
+    for i in numList :
+        answer += i
+    
+    return answer
+
+solution(123)
+
+
+
+# solution2 (recursive call)
+def solution(n):
+    sList = str(n)
+    answer = int(sList[0]) # 1 2 3 ..
+    
+    if len(sList) > 1 :
+        sList = sList[1:] #remove first element in list
+        answer += solution(sList)
+    
+    return answer
+    
+solution(123)
