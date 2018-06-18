@@ -1,7 +1,7 @@
 # algorithms
-algorithms
 
-programmers(https://programmers.co.kr/) algorithm training
+This category is for studying algorithms.
 
-Java, Python
+especailly I stydy at programmers(https://programmers.co.kr/) that is a algorithm training site
 
+Language I usually use is Java, Python.
