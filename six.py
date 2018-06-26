@@ -1,8 +1,4 @@
-
-
-
-
-# solution1 (for문)
+# solution1 (for loop)
 
 def solution(n):
     answer = 0
@@ -14,7 +10,6 @@ def solution(n):
     return answer
 
 solution(123)
-
 
 
 # solution2 (recursive call)
