@@ -16,18 +16,18 @@ public class Solution {
       }
       
       return b;
-	  }
+  }
     
-    public int solution2(int n) {
-	     int answer = 0;
+  public int solution2(int n) {
+	int answer = 0;
 	     
-	     if(n<=1) {
-	    	 return n;
-	     }else{
-	    	 answer = solution(n-2) + solution(n-1);
-	     }
+     	if(n<=1) {
+	   return n;
+     	}else{
+	   answer = solution(n-2) + solution(n-1);
+     	}
 	     
-	     return answer;
-	  }
+	return answer;
+  }
     
 }
