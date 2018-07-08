@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class Solution {
+class BinaryGap {
     public int solution(int N) {
         // write your code in Java SE 8
         // Integet to Binary
