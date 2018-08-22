@@ -5,18 +5,17 @@ class PassingCars {
         int carsTravelingEast = 0;
  
         for (int i = 0; i < A.length; i++) {
-        	if (A[i] == 0) {
-        		carsTravelingEast++;
-        	}
+        	if (A[i] == 0)
+        	    carsTravelingEast++;
         	
         	if (A[i] == 1 && carsTravelingEast > 0) {
-        		passingCars += carsTravelingEast;
+        	    passingCars += carsTravelingEast;
         		
-        		if (passingCars > PASSING_CAR_LIMIT)
-              return -1;
+        	    if (passingCars > PASSING_CAR_LIMIT)
+        	        return -1;
         	}
         }
         
-		return passingCars;
+	return passingCars;
     }
 }
