@@ -23,5 +23,4 @@ class SelectionSort {
 
         System.out.println(Arrays.toString(list));
    }
-   
 }
