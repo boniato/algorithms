@@ -1,20 +1,37 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /*
  * 기능개발 (스택/큐)
  */ 
-class Solution18 {
+class Solution {
+    
     public int[] solution(int[] progresses, int[] speeds) {
-        int[] endDay = new int[100];
-        int day = -1;
-        
-        for(int i=0; i<progresses.length; i++) {
-            while(progresses[i] + (day*speeds[i]) < 100) {
-                day++;
+        ArrayList<Integer> list = new ArrayList<>();
+    	Queue<Integer> queue = new LinkedList<>();
+ 		int cnt = 1;
+ 		
+ 		for (int i = 0; i < progresses.length; i++) {
+ 			int workDay = (int) Math.ceil(((double) (100 - progresses[i]) / speeds[i])); //7,3,9
+ 			queue.add(workDay);
+ 		}
+ 		
+		int workDay = queue.poll();
+		while( !queue.isEmpty() ) {
+            if(workDay >= queue.peek()){
+            	queue.poll();
+            	cnt++;
+            }else{
+            	workDay = queue.poll();
+            	list.add(cnt);
+            	cnt = 1;
             }
-            endDay[day]++;
         }
-        return Arrays.stream(dayOfend).filter(i -> i!=0).toArray();
+		list.add(cnt);
+        
+		int[] answer = new int[list.size()];
+        for(int j=0; j<list.size(); j++){
+        	answer[j] = list.get(j);
+        	System.out.println(answer[j]);
+        }
+ 		
+		return answer;
     }
 }
