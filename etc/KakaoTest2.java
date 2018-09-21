@@ -12,10 +12,10 @@ public class KakaoTest2 {
 	
 	public static int solution(String arg) {
 		
-		String[] num = new String[3]; //Á¡¼ö(0~10»çÀÌÀÇ Á¤¼ö)
-		String[] bonus = new String[3]; //º¸³Ê½º(S,D,T)
-		String[] option = {"","",""}; //¿É¼Ç(*,#)
-		int chance[] = new int[3]; // ÃÑ3¹øÀÇ ±âÈ¸
+		String[] num = new String[3]; //ì ìˆ˜(0~10ì‚¬ì´ì˜ ì •ìˆ˜)
+		String[] bonus = new String[3]; //ë³´ë„ˆìŠ¤(S,D,T)
+		String[] option = {"","",""}; //ì˜µì…˜(*,#)
+		int chance[] = new int[3]; // ì´3ë²ˆì˜ ê¸°íšŒ
 		int score = 0;
 		//boolean nest = arg.contains("*") & arg.contains("#");
 		
@@ -26,7 +26,7 @@ public class KakaoTest2 {
 		for( int i=0; i<3; i++ ) {
 			chance[i] = getBonus(bonus[i], Integer.parseInt(num[i]));
 			
-			if ( option.length != 0 ) { //optionÀÌ ÀÖÀ¸¸é
+			if ( option.length != 0 ) { //optionì´ ìˆìœ¼ë©´
 				if( option.length > i ) {
 					if( i>0 && "*".equals(option[i]) ) {
 						chance[i-1] = getOption("*", chance[i-1]);
