@@ -54,6 +54,6 @@ class castExample {
 
       System.out.println( str2.equalsIgnoreCase("b") ); //false
       System.out.println( str2.equalsIgnoreCase("B") ); //false
-      
+       
       }
 }
