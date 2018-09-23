@@ -3,10 +3,19 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Arrays;
 
-class Solution {
-    public String[] solution(String[] record) {
+public class Solution19 {
+   public static void main(String[] args) {
+
+     /* String[] record = { "Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo"
+      ,"Change uid4567 Ryan", "Enter uid1111 Muzi","Change uid1111 Gogo","Leave uid1234","Enter uid1234 NEW"};
+      */
+      String[] record = { "Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo" ,"Change uid4567 Ryan"};
+
+      solution(record);
+   }
+
+   public static String[] solution(String[] record) {
       Map<String, Object> events = null;
       Map<String, Object> nickMap = new HashMap<>();
       List<Map<String, Object>> eventsList = new ArrayList<>();
@@ -31,27 +40,22 @@ class Solution {
       }
          
       String[] answer = new String[eventsList.size()];
+      
       for(int j=0; j<eventsList.size(); j++) {
     	  Iterator<String> eventsIterator = eventsList.get(j).keySet().iterator();
     	  String eventsKey = eventsIterator.next();
+    	  String nickname = (String) nickMap.get(eventsKey);
     	  
-    	  Iterator<String> keyIterator = nickMap.keySet().iterator();
-    	  while (keyIterator.hasNext()) {
-	          String key = keyIterator.next();
-	          
-	          if(eventsKey.equals(key)) {	
-	        	  String nickName = (String) nickMap.get(key);
-	        	  if("Enter".equals(eventsList.get(j).get(eventsKey))) {
-	        		  answer[j] = nickName + "님이 들어왔습니다.";
-	        		  continue;
-	        	  }if("Leave".equals(eventsList.get(j).get(eventsKey))) {
-	        		  answer[j] = nickName + "님이 나갔습니다.";
-	        		  continue; 
-	        	  }
-	          }
+    	  if(nickMap.get(eventsKey) != null) {
+	    	  if("Enter".equals(eventsList.get(j).get(eventsKey))) {
+	    		  answer[j] = nickname + "님이 들어왔습니다.";
+	    	  }else if("Leave".equals(eventsList.get(j).get(eventsKey))) {
+	    		  answer[j] = nickname + "님이 나갔습니다.";
+	    	  }
     	  }
-	          
       }
+      
       return answer;
-    }
+   }
+
 }
