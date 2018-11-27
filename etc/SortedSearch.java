@@ -9,7 +9,7 @@ public class SortedSearch {
             mid = (start + end) / 2;
             
             if (sortedArray[mid] < lessThan) {
-               if (mid < sortedArray.length - 1 && sortedArray[mid + 1] < lessThan) { // check id next value is also valid
+               if (mid < sortedArray.length - 1 && sortedArray[mid + 1] < lessThan) {
                    start = mid + 1;
                    continue;
                } else
