@@ -10,7 +10,7 @@ public class Solution19 {
      /* String[] record = { "Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo"
       ,"Change uid4567 Ryan", "Enter uid1111 Muzi","Change uid1111 Gogo","Leave uid1234","Enter uid1234 NEW"};
       */
-      String[] record = { "Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo" ,"Change uid4567 Ryan"};
+      String[] record = {"Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo" ,"Change uid4567 Ryan"};
 
       solution(record);
    }
@@ -34,8 +34,8 @@ public class Solution19 {
         	eventsList.add(events);
          }
          
-         if(status.equals("Enter") || status.equals("Change")) {
-            nickMap.put(uid, nickname);
+         if("Enter".equals(status) || "Change".equals(status)) {
+         	nickMap.put(uid, nickname);
          }
       }
          
