@@ -21,8 +21,7 @@ class BinaryGap {
             if( String.valueOf(s).equals("1") ) {
                 if( tempLen >= maxLen ) {
                     maxLen = tempLen;
-                    tempLen = 0;
-                } else
+                }
                     tempLen = 0;
             } else if(String.valueOf(s).equals("0")) {
                 tempLen += 1;
