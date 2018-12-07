@@ -41,7 +41,7 @@ class Nesting {
 	}
 		
         //if there are no "que.size() != 2", the solution returned a wrong answer (got 1 expected 0)
-		return que.size() != 2 && que.size() % 2 == 0 ? 1 : 0;
-	}
+	return que.size() != 2 && que.size() % 2 == 0 ? 1 : 0;
+    }
     
 }
