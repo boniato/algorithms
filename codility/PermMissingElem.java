@@ -29,13 +29,11 @@ class PermMissingElem {
         return missingNum;
     }
     
-    
     public satatic int solution2(int[] A) {
         public int solution(int[] A) {
         Arrays.sort(A);
         
         for (int i = 0; i < A.length; i++) {
-            
             if (i + 1 != A[i])  return i + 1;
         }
         
