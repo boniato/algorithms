@@ -18,7 +18,7 @@
 import java.util.Arrays;
 
 class Triangle {
-    public int solution(int[] A) {
+    public int solution1(int[] A) {
         Arrays.sort(A);
 
         //if for-clause starts backwards, numbers to compare decrease..
@@ -27,6 +27,18 @@ class Triangle {
                 return 1;
             }
         }
+        return 0;
+    }
+
+    public int solution2(int[] A) {
+        // write your code in Java SE 8
+        Arrays.sort(A);
+  
+        for( int i = 0 ; i < A.length-2 ; i++){
+            if(A[i] < 0 ) continue;
+            if((long)A[i] + A[i+1] > A[i+2]) return 1;
+        }
+        
         return 0;
     }
 }
