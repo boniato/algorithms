@@ -2,10 +2,10 @@ class PermMissingElem {
 
     public static void main (String args []) {
     	int[] A = {2, 3, 1, 5};
-    	solution(A);
+    	solution1(A);
     }
     
-    public satatic int solution(int[] A) {
+    public satatic int solution1(int[] A) {
         int N = A.length+1; //The first element of an array starts zero(0).
         boolean[] numPresent = new boolean[N + 1]; //each default value of elements is fault.
         
@@ -27,5 +27,18 @@ class PermMissingElem {
             missingNum++;
         }
         return missingNum;
+    }
+    
+    
+    public satatic int solution2(int[] A) {
+        public int solution(int[] A) {
+        Arrays.sort(A);
+        
+        for (int i = 0; i < A.length; i++) {
+            
+            if (i + 1 != A[i])  return i + 1;
+        }
+        
+        return A.length + 1;
     }
 }
