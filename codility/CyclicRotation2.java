@@ -1,6 +1,3 @@
-// you can also use imports, for example:
-// import java.util.*;
-
 // Solution Result: https://app.codility.com/demo/results/trainingG8UY7Y-KNG/
 
 class CyclicRotation2.java {
