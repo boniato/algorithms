@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 class Distinct {
-    public static int solution(int[] A) {
+    public static int solution1(int[] A) {
           Arrays.sort(A);
 
           //If there are no follow if-clause, extreme_empty error occurs.
@@ -16,4 +16,16 @@ class Distinct {
 
           return count;
     }
+    
+    
+    public int solution2(int[] A) {
+        Set<Integer> nums = new HashSet<>();
+
+        for (int a : A) {
+            nums.add(a);
+        }
+
+        return nums.size();
+    }
+
 }
