@@ -27,18 +27,18 @@ class Nesting {
     
     
     public int solution2(String S) {
-		Queue<Character> que = new LinkedList<>();
+	Queue<Character> que = new LinkedList<>();
 
-		for (int i = 0; i < S.length(); i++) {
-			if (S.charAt(i) == '(') {
-				que.offer('(');
-			} else { // character is ')', if que is empty, S has more ')' than '('
-				if (que.isEmpty())
-					return 0;
-				
-				que.poll();
-			}
+	for (int i = 0; i < S.length(); i++) {
+		if (S.charAt(i) == '(') {
+			que.offer('(');
+		} else { // character is ')', if que is empty, S has more ')' than '('
+			if (que.isEmpty())
+				return 0;
+			
+			que.poll();
 		}
+	}
 		
         //if there are no "que.size() != 2", the solution returned a wrong answer (got 1 expected 0)
 		return que.size() != 2 && que.size() % 2 == 0 ? 1 : 0;
