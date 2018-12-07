@@ -1,4 +1,5 @@
 class TapeEquilibrium {
+	
     public int solution(int[] A) {
         // write your code in Java SE 8
         int right = 0;
@@ -9,9 +10,9 @@ class TapeEquilibrium {
 	    for (int element : A)
 	        right += element; //sum of array A
 	        
-	    for (int p=1; p < A.length; ++p) {
-	        right -= A[p-1]; //10, 9, 7, 3
-	        left += A[p-1];  //3, 4, 6, 10
+	    for (int p=0; p < A.length-1; p++) {
+	        right -= A[p]; //10, 9, 7, 3
+	        left += A[p];  //3, 4, 6, 10
 	        sum = Math.abs(right - left); //7, 5, 1, 7
 	        
 	        if (min > sum) //Find the smallest number
@@ -20,4 +21,5 @@ class TapeEquilibrium {
 	    
 	    return min;
     }
+	
 }
