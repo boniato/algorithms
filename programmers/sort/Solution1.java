@@ -25,7 +25,6 @@ class Solution1 {
 	        answer[i] = tmp[k-1];
 	    }
 		
-		System.out.println(Arrays.toString(answer));
 		return answer;
 	}
 }
