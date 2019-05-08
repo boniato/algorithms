@@ -21,7 +21,6 @@ class Solution1 {
 	            tmp[a++] = array[j];
 	        
 	        Arrays.sort(tmp);
-	        
 	        answer[i] = tmp[k-1];
 	    }
 		
