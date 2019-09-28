@@ -3,12 +3,8 @@ import java.util.Arrays;
 class BubbleSort {
 	
   public static void main(String args[]) {
-	int[] A = {31, 25, 12, 22, 11};
-	//int[] A = {1,2,3};
-	//int[] A = {2,1,1,2,3,1};
-	//String S = "(()(())())";
-	//String S = "((())";
-	bubbleSort(A);
+      int[] A = {31, 25, 12, 22, 11};
+      bubbleSort(A);
   }
 
   public static void getBubbleSort(int[] arr) {
