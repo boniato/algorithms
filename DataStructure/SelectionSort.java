@@ -1,9 +1,9 @@
 class SelectionSort {
 	
-	 public static void main(String args[]) {
-		int[] A = {9,1,6,8,4,3,2,0};
-		getSelectionSort(A);
-	 }
+   public static void main(String args[]) {
+        int[] A = {9,1,6,8,4,3,2,0};
+        getSelectionSort(A);
+   }
 
    public static void getSelectionSort(int[] list) {
         int indexMin, temp;
