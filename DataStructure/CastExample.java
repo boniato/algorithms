@@ -1,4 +1,4 @@
-class castExample {
+class CastExample {
     public int solution(int N) {
 
       //String to char
