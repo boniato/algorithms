@@ -22,7 +22,7 @@
 21
 */
 
-public class BFS {
+public class BFS2 {
   static int[] dir = new int[3];
   static int cow;
   
@@ -38,10 +38,10 @@ public class BFS {
     dir[1] = -1;
     dir[2] = 5;
 
-    bfs(root);
+    bfs2(root);
   }
   
-  static void bfs(int cur,int cow) {
+  static void bfs2(int cur,int cow) {
     static int[] dir = {1,-1,5};
     static int[] ch;
     static Queue<Integer> queue = new LinkedList<>();
