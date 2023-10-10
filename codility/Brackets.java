@@ -2,6 +2,13 @@ package codility;
 
 import java.util.Stack;
 
+
+/**
+* 괄호의 짝이 정상적으로 맞는지를 리턴. 단, 빈 문자열 입력시에도 정상 리턴
+* 1. 여는 괄호 (, {, [ 는 push
+* 2. 닫는 괄호 ), }, ] 는 pop
+* 3. 주의) stack 이 비어있을 때 pop 하면 에러 발생
+**/
 public class Brackets {
 
 	public static void main(String[] args) {
