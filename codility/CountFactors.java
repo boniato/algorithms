@@ -1,4 +1,6 @@
 /**
+* Note: using a brute force approach (checking every number below N) wouldn’t pass this problem because it would take too long.
+* The strategy is to find all factors by only checking up to square root of N and incrementing by 2 each time N % i == 0
 * 약수의 갯수 구하기
 * "만약 √(N)이 정수라면 √(N)은 N의 약수이며, 나머지 약수들은 √(N)를 기준으로 앞 뒤로 짝을 이루고 있다."
 **/
