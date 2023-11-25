@@ -1,0 +1,23 @@
+import java.util.*;
+public class WordInSentence3 {
+    public String solution(String str) {
+        String answer = "";
+        int m = Integer.MIN_VALUE;
+        String[] s = str.split(" ");
+        for (String x : s) {
+          int len = x.length();
+          if (len > m) {
+              m = len;
+              answer = x;
+          }
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+        WordInSentence3 T = new WordInSentence3();
+        Scanner keyboard = new Scanner(System.in);
+        String str = keyboard.nextLine();
+        System.out.println(T.solution(str));
+    }
+}
